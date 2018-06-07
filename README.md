@@ -21,7 +21,7 @@ like classification, text similarity matching, named entity recognition, ctr and
 ### Text Matching <a name="text_match"></a>
 Text matching are wide used in infromation retrieval, question answering, conversational response ranking etc, so we choose some simple and easy
 models, and implement them in an enffiency way with tensorflow. As a start, I will implement a baseline with [DSSM](https://www.microsoft.com/en-us/research/project/dssm/)  
-and the introduction about this model in here.
+and the introduction about this model in [here](https://github.com/syw2014/DeepNLP-models/blob/master/docs/dssm.md).
 
 
 
