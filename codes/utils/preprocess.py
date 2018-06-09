@@ -10,6 +10,7 @@ from collections import Counter
 import tensorflow as tf
 import argparse
 import jieba
+import time
 
 #parser = argparse.ArgumentParser(description="Arugments for data pre-process")
 #parser.add_argument("-input_file", type=str, help="input corpus filename")
@@ -52,6 +53,7 @@ class Vocab(object):
         # To choose single word or token
         #counter = {} or Counter()
         counter = Counter()
+        t_start = time.time()
         with codecs.open(self.filename, encoding='utf-8') as f:
             for line in f.readlines():
                 # TODO, make it as a single character
@@ -66,7 +68,7 @@ class Vocab(object):
                     if w not in self.stopwords:
                         counter.update(w)
         print("Total words in corpus: {}".format(len(counter)))
-
+        
         # term filter by term frequency
         word_counts = [w for w in counter.items() if w[1] > FLAGS.min_term_freq]
         word_counts.sort(key=lambda x:x[1], reverse=True)
@@ -77,7 +79,8 @@ class Vocab(object):
         with tf.gfile.FastGFile(FLAGS.output_vocab, "w") as f:
             f.write("\n".join(["%s %d" %(w, c) for w, c in vocab_dict.items()]))
         print("Wrote vocabulary to {}".format(FLAGS.output_vocab))
-        
+        t_end = time.time()
+        print("Cost time: {}s".format(t_end - t_start))
         #self.vocab = word_counts
 
 def main(unused_argv):
