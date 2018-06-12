@@ -177,11 +177,12 @@ class BuildTFRecord(Vocab):
                 if example is not None:
                     writer.write(example.SerializeToString())
                     counter += 1
+        writer.close()
         print("Wrote data to example finished total example: {}".format(counter))
 
 
     @staticmethod
-    def example_parse(self, example):
+    def example_parse(example):
         """Parse example to tf tensor"""
         context_features = {
             "pair_id": tf.FixedLenFeature([], dtype=tf.int64),
@@ -194,7 +195,7 @@ class BuildTFRecord(Vocab):
         }
 
         # parse
-        context_parsed, sequence_parsed = tf.parse_single_example(
+        context_parsed, sequence_parsed = tf.parse_single_sequence_example(
             serialized=example,
             context_features=context_features,
             sequence_features=sequence_features
@@ -202,6 +203,7 @@ class BuildTFRecord(Vocab):
 
         return {"q_tokens": sequence_parsed["q_tokens"], "d_tokens": sequence_parsed["d_tokens"],
                 "pair_id": context_parsed["pair_id"], "label": context_parsed["label"]}
+        # return {"q_tokens": sequence_parsed["q_tokens"], "d_tokens": sequence_parsed["d_tokens"]}
 
 
 def main(unused_argv):
