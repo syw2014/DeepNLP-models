@@ -81,6 +81,4 @@ if __name__ == "__main__":
         sess.run(train_init_op)
 
         # print(next_element)
-        # print(sess.run(next_element["d_tokens"]))
-        for _ in range(10):
-            print(sess.run(next_element["q_tokens"]))
+        print(sess.run(next_element["d_tokens"]))

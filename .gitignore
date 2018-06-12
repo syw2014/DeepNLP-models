@@ -1,3 +1,5 @@
 .idea/
 data/
 !data/SICK.txt
+codes/utils/*.pyc
+codes/TextMatch/*.pyc
