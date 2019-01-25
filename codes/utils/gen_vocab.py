@@ -232,7 +232,7 @@ def csv_parser(data_dir):
             dataset.append([arr[1].strip(), arr[2].strip(), arr[3].strip()])
         print('Load data from {}/atec_nlp_sim_train.csv, total sample:{}'.format(data_dir, len(dataset) - tmp_size))
 
-    # split train/dev/test as 7:1:2
+    # split train/dev/test as 7:1:2, and
     random.shuffle(dataset)
     num_samples = len(dataset)
     train_dataset = dataset[: int(0.7*num_samples)]
