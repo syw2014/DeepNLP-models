@@ -46,6 +46,7 @@ def prepare_dataset(record_file, batch_size=128):
 
     # expand
     # dataset = dataset.map(expand)
+
     dataset = dataset.padded_batch(batch_size, padded_shapes={
         "pair_id": [],       # scalar do not need padding
         "label": [],         # scala do not need padding
@@ -76,7 +77,7 @@ if __name__ == "__main__":
     tfrecord = "../../data/train.tfrecord"
 
     with tf.Session() as sess:
-        next_element, train_init_op = prepare_dataset_iterators(tfrecord, batch_size=1)
+        next_element, train_init_op = prepare_dataset_iterators(tfrecord, batch_size=5)
 
         sess.run(train_init_op)
 
