@@ -8,6 +8,7 @@ Table of Contents
 1. [Introduction](#Introduction)
 2. [NLP Tasks](#tasks)
     - [Text Matching](#text_match)
+    - [Text Search](#text_search)
 
 
 ## Introduction
@@ -23,10 +24,18 @@ Text matching are wide used in infromation retrieval, question answering, conver
 models, and implement them in an enffiency way with tensorflow. As a start, I will implement a baseline with [DSSM](https://www.microsoft.com/en-us/research/project/dssm/)  
 and the introduction about this model in [here](https://github.com/syw2014/DeepNLP-models/blob/master/docs/dssm.md).
 
+### Text Search <a name="text_search"></a>
+Here we try to complete this task with another approach called $Deep Search$. In the current version we havn't add complicated algorithms, we just use word embedding and [Faiss](https://github.com/facebookresearch/faiss.git), embedding to encode query and answers, and faiss speed search related answers. This may also can be a simple way to do QA, but the result may not very good.Check [here](https://github.com/syw2014/DeepNLP-models/blob/master/codes/TextSearch/deep_search.py) to find module.
+
+*TODO*
+- Add implementation ideas of this parts
+- Collect more QA data 
+- Implement service for Query search.
+
 
 
 
 
 
 ## Contact
-If you have any ideas or suggestion you can contact me with ***jerryshi0110@gmail.com***
+If you have any ideas or suggestion contact me with ***jerryshi0110@gmail.com***
