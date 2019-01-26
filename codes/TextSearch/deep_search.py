@@ -145,16 +145,21 @@ class SearchModel(object):
         """
         # first we check question number is the same as the answer number
         assert np.shape(vec_sim) == np.shape(vec_ids) and np.shape(vec_sim)[0] == len(question_sim)
-        print("Debug question_sim==>{}".format(question_sim))
+        # print("Debug question_sim==>{}".format(question_sim))
         # normalize
-        qmin, qmax = question_sim.min(), question_sim.max()
-        question_sim = (question_sim - qmin) / (qmax - qmin)
+
+        if len(question_sim) != 1:
+            question_sim = np.array(question_sim)
+            qmin, qmax = question_sim.min(), question_sim.max()
+            question_sim = (question_sim - qmin) / (qmax - qmin)
         vmin, vmax = vec_sim.min(), vec_sim.max()
         vec_sim = (vec_sim - vmin) / (vmax - vmin)
 
         # calculate weight
         for i, w in enumerate(question_sim):
             vec_sim[i, :] = vec_sim[i, :] * w
+        vmin, vmax = vec_sim.min(), vec_sim.max()
+        vec_sim = (vec_sim - vmin) / (vmax - vmin)
 
         # result
         ans_score_dict = {}
@@ -228,8 +233,8 @@ class SearchModel(object):
         # step4, get related answers
         vec_sim, vec_ids = self._index_search(index=self.answer_index, vec=answer_vec, topk=topk)
         # if use L2 distance to calculate similarity, you should convert the result to real sim
-        if len(sim_result) != 1:
-            sim_result = 1 - np.array(sim_result)
+        # if len(sim_result) != 1:
+        sim_result = 1 - np.array(sim_result)
         vec_sim = 1 - vec_sim
 
         # rank and return results
