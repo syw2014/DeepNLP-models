@@ -9,7 +9,10 @@ Table of Contents
 2. [NLP Tasks](#tasks)
     - [Text Matching](#text_match)
     - [Text Search](#text_search)
+    - [Document Classification](#doc_classify)
 
+3. [Learning to Rank](#rank)
+    - [DeepFM](#deepfm)
 
 ## Introduction
 As we all know deep learning has shown super power in image processing, so a lot researchers try to study NLP tasks with deep learning, and a various of 
@@ -27,12 +30,22 @@ and the introduction about this model in [here](https://github.com/syw2014/DeepN
 ### Text Search <a name="text_search"></a>
 Here we try to complete this task with another approach called $Deep Search$. In the current version we havn't add complicated algorithms, we just use word embedding and [Faiss](https://github.com/facebookresearch/faiss.git), embedding to encode query and answers, and faiss speed search related answers. This may also can be a simple way to do QA, but the result may not very good.Check [here](https://github.com/syw2014/DeepNLP-models/blob/master/codes/TextSearch/deep_search.py) to find module.
 
-*TODO*
-- Add implementation ideas of this parts
-- Collect more QA data 
-- Implement service for Query search.
+- [x] Add implementation ideas of this parts
+- [x] Collect more QA data 
+- [x] Implement service for Query search.
 
+### Document Classification <a name="doc_classify"></a>
+    - [x] Add Descriptions
+    - [x] Add implementation
 
+## Learning To Rank <a name="rank"></a>
+Learning to rank is an important task in recommendation, here I collect the most common models and algorithms to reimplement them with real dataset.
+The different between the implementation with other repository in github was my implemenation can be used in your product project directly after 
+modified the input pipeline proprecess.
+
+### DeepFM <a name="deepfm"></a>
+    - [x] Add description
+    - [x] Add impemenation
 
 
 
