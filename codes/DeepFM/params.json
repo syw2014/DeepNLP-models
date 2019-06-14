@@ -1,0 +1,19 @@
+{
+    "test_size": 4584061,
+    "field_size": 39,
+    "train_size": 10000,
+    "dev_size": 10000,
+    "padding_value": 121640,
+
+    "feat_size": 121641,
+    "batch_size": 128,
+    "fm_dropout_keep": 1.0,
+    "dropout_keep_prob": 0.5,
+    "epochs": 1,
+    "learning_rate": 0.1,
+    "l2_reg": 0.1,
+    "buffer_size": 1,
+    "embedding_size": 8,
+    "hidden_layers":"32,32",
+    "save_summary_steps": 10
+}
