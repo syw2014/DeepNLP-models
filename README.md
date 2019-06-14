@@ -35,8 +35,8 @@ Here we try to complete this task with another approach called $Deep Search$. In
 - [ ] Implement service for Query search.
 
 ### Document Classification <a name="doc_classify"></a>
-    - [ ] Add Descriptions
-    - [ ] Add implementation
+- [ ] Add Descriptions
+- [ ] Add implementation
 
 ## Learning To Rank <a name="rank"></a>
 Learning to rank is an important task in recommendation, here I collect the most common models and algorithms to reimplement them with real dataset.
@@ -44,8 +44,8 @@ The different between the implementation with other repository in github was my 
 modified the input pipeline proprecess.
 
 ### DeepFM <a name="deepfm"></a>
-    - [ ] Add description
-    - [ ] Add impemenation
+- [ ] Add description
+- [ ] Add impemenation
 
 
 
