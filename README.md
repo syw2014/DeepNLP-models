@@ -9,6 +9,7 @@ Table of Contents
 2. [NLP Tasks](#tasks)
     - [Text Matching](#text_match)
     - [Text Search](#text_search)
+    - [Keyword Search](#keyword_search)
     - [Document Classification](#doc_classify)
 
 3. [Learning to Rank](#rank)
@@ -28,11 +29,16 @@ models, and implement them in an enffiency way with tensorflow. As a start, I wi
 and the introduction about this model in [here](https://github.com/syw2014/DeepNLP-models/blob/master/docs/dssm.md).
 
 ### Text Search <a name="text_search"></a>
-Here we try to complete this task with another approach called $Deep Search$. In the current version we havn't add complicated algorithms, we just use word embedding and [Faiss](https://github.com/facebookresearch/faiss.git), embedding to encode query and answers, and faiss speed search related answers. This may also can be a simple way to do QA, but the result may not very good.Check [here](https://github.com/syw2014/DeepNLP-models/blob/master/codes/TextSearch/deep_search.py) to find module.
+Here we try to complete this task with another approach called $Deep Search$. In the current version we havn't add complicated algorithms, we just use word embedding and [Faiss](https://github.com/facebookresearch/faiss.git), encoding query and answers to embedding, and search with vectors, faiss speed search related answers. This may also can be a simple way to do QA, but the result may not very good.Check [here](https://github.com/syw2014/DeepNLP-models/blob/master/codes/TextSearch/deep_search.py) to find module.
 
 - [ ] Add implementation ideas of this parts
 - [ ] Collect more QA data 
 - [ ] Implement service for Query search.
+
+### Keyword Search <a name="keyword_search"></a>
+Keyword search also call string match, it's a classical problem, in our scenario we use keyword search for text detect that we want to find which text or 
+document can not be showing to user.I have implemented two version with c/c++ and python, C++ version was implemented from scratch, pytho version designed
+with pyahocorasich package.For detail please check [here]()
 
 ### Document Classification <a name="doc_classify"></a>
 - [ ] Add Descriptions
