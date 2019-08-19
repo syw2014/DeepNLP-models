@@ -38,7 +38,7 @@ Here we try to complete this task with another approach called $Deep Search$. In
 ### Keyword Search <a name="keyword_search"></a>
 Keyword search also call string match, it's a classical problem, in our scenario we use keyword search for text detect that we want to find which text or 
 document can not be showing to user.I have implemented two version with c/c++ and python, C++ version was implemented from scratch, pytho version designed
-with pyahocorasich package.For detail please check [here]()
+with pyahocorasich package.For detail please check [here](https://github.com/syw2014/DeepNLP-models/tree/master/codes/KeywordSearch)
 
 ### Document Classification <a name="doc_classify"></a>
 - [ ] Add Descriptions
