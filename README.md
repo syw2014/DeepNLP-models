@@ -41,8 +41,8 @@ document can not be showing to user.I have implemented two version with c/c++ an
 with pyahocorasich package.For detail please check [here](https://github.com/syw2014/DeepNLP-models/tree/master/codes/KeywordSearch)
 
 ### Document Classification <a name="doc_classify"></a>
-- [ ] Add Descriptions
-- [ ] Add implementation
+Document classification is a common application in task, I will write some implemenation with tensorflow.
+- [TextCNN](https://github.com/syw2014/DeepNLP-models/tree/master/codes/TextCNN) was a multi-class classification with 7 labels, all the data was short titles.
 
 ## Learning To Rank <a name="rank"></a>
 Learning to rank is an important task in recommendation, here I collect the most common models and algorithms to reimplement them with real dataset.
