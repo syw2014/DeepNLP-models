@@ -106,7 +106,7 @@ class Vocab:
         tokens = doc
         if segment:
             tokens = list(jieba.cut(doc.lower()))
-        # Note, here we do not instead words not in vocabuary
+        # Note, here we do not instead words not in vocabulary
         tokens = [w for w in tokens if w not in self.stopwords]
         ids = [self.vocab[w] for w in tokens if w in self.vocab]
         return ids

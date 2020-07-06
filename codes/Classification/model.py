@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Author  : Jerry.Shi
-# File    : modelling.py
+# File    : model.py
 # PythonVersion: python3.5
 # Date    : 2019/10/19 10:02
 # Software: PyCharm
@@ -61,3 +61,16 @@ class TextCNN(tf.keras.Model):
         outputs = tf.nn.softmax(x)
 
         return outputs
+
+def BOW_net():
+    pass
+
+def lstm_net():
+    pass
+
+def bilstm_net():
+    pass
+
+def gru_net():
+    pass
+

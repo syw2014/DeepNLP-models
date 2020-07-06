@@ -8,7 +8,7 @@
 
 import tensorflow as tf
 import argparse
-from modelling import TextCNN
+from model import TextCNN
 from create_vocab import Vocab
 from data_utils import create_dataset_with_tf, create_single_input
 import pandas as pd
